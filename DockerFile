@@ -1,0 +1,6 @@
+FROM python
+WORKDIR /app
+COPY . /app
+RUN pip install spacy
+RUN python -m spacy download en_core_web_sm
+CMD [ "python3","cloudassignment.py" ]
